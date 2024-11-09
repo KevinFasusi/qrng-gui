@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-bar {
+    padding-top: 2rem;
+}
+
+.simple-button {
+    margin-top: 20px;
+}
+
+.results {
+    margin-left: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-container-alt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.no-bull {
+    list-style-type: none;
+
+}
+
+.list-row {
+column-count: 1;
+column-rule: dotted 1px #333;
+list-style-type: none;
+}
+
