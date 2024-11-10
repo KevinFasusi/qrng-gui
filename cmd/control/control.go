@@ -80,6 +80,19 @@ func (c *QrngCli) GetSpeed() string {
 	return speed
 }
 
+func (c *QrngCli) GetRatio() string {
+	cmd := exec.Command(QRNG.Strings(), "stats", "--device", usbDevice, "--snapshot")
+	stdoutStderr, _ := cmd.CombinedOutput()
+	out := strings.Split(string(stdoutStderr), " ")
+	ratio := ""
+	for i := 0; i < len(out); i++ {
+		if strings.Contains(out[i], "/") && len(out[i]) == 25 {
+			ratio = out[i]
+		}
+	}
+	return ratio
+}
+
 func (c *QrngCli) GetUsbDevices() []string {
 
 	switch c.OS {

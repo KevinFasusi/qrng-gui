@@ -2,15 +2,24 @@
 
 import React, {useState} from "react";
 import QubitGridPageComponent from "@/app/components/qubit-grid";
-import {GetSpeed} from "@/wailsjs/wailsjs/go/control/QrngCli";
+import {GetRatio, GetSpeed} from "@/wailsjs/wailsjs/go/control/QrngCli";
+
+let ratioHistory :string = "" ;
+let speedHistory :string = "" ;
 
 export default function HomeClientPage({ qubitNumber}: { qubitNumber: number}) {
 
-    const [text, setText] = useState<string>("");
+    const [speed, setSpeed] = useState<string>("");
+    const [ratio, setRatio] = useState<string>("");
 
     setTimeout(() => {
-        GetSpeed().then((text: string) => setText(text));
-        }, 1000);
+        GetSpeed().then((speed: string) => setSpeed(speed));
+        GetRatio().then((ratio: string) => setRatio(ratio));
+        }, 8000);
+
+
+     ratioHistory  = ratio.trim().length !=0 ? ratio : ratioHistory;
+     speedHistory  = speed.trim().length !=0 ? speed : speedHistory;
 
     return (
         <>
@@ -22,7 +31,7 @@ export default function HomeClientPage({ qubitNumber}: { qubitNumber: number}) {
                 <div className="grid-item-alt">
                     <div className="flex justify-center flex-row bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <ul className="no-bull justify-center">
-                            <li>Speed (128-bits):{text}</li>
+                            <li>Speed (128-bits): {speedHistory}</li>
                         </ul>
                     </div>
                 </div>
@@ -30,7 +39,7 @@ export default function HomeClientPage({ qubitNumber}: { qubitNumber: number}) {
                 <div className="grid-item-alt">
                     <div className="flex justify-center flex-row bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <ul className="no-bull justify-center">
-                            <li>Uptime: 12 min 54s</li>
+                            <li>Ratio: {ratioHistory}</li>
                         </ul>
                     </div>
                 </div>

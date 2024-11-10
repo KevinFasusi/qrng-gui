@@ -14,6 +14,10 @@ export function GenerateSha256(arg1, arg2) {
   return window['go']['control']['QrngCli']['GenerateSha256'](arg1, arg2);
 }
 
+export function GetRatio() {
+  return window['go']['control']['QrngCli']['GetRatio']();
+}
+
 export function GetSpeed() {
   return window['go']['control']['QrngCli']['GetSpeed']();
 }

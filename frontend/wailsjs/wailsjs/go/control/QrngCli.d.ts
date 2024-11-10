@@ -7,6 +7,8 @@ export function GenerateKeys(arg1:number,arg2:number):Promise<Array<string>>;
 
 export function GenerateSha256(arg1:number,arg2:number):Promise<Array<string>>;
 
+export function GetRatio():Promise<string>;
+
 export function GetSpeed():Promise<string>;
 
 export function GetSummary():Promise<string>;
