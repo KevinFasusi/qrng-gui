@@ -61,28 +61,28 @@ export function EventsOffAll(): void;
 export function LogPrint(message: string): void;
 
 // [LogTrace](https://wails.io/docs/reference/runtime/log#logtrace)
-// logs the given message at the `trace` log level.
+// logs the given message at the `trace` store level.
 export function LogTrace(message: string): void;
 
 // [LogDebug](https://wails.io/docs/reference/runtime/log#logdebug)
-// logs the given message at the `debug` log level.
+// logs the given message at the `debug` store level.
 export function LogDebug(message: string): void;
 
 // [LogError](https://wails.io/docs/reference/runtime/log#logerror)
-// logs the given message at the `error` log level.
+// logs the given message at the `error` store level.
 export function LogError(message: string): void;
 
 // [LogFatal](https://wails.io/docs/reference/runtime/log#logfatal)
-// logs the given message at the `fatal` log level.
+// logs the given message at the `fatal` store level.
 // The application will quit after calling this method.
 export function LogFatal(message: string): void;
 
 // [LogInfo](https://wails.io/docs/reference/runtime/log#loginfo)
-// logs the given message at the `info` log level.
+// logs the given message at the `info` store level.
 export function LogInfo(message: string): void;
 
 // [LogWarning](https://wails.io/docs/reference/runtime/log#logwarning)
-// logs the given message at the `warning` log level.
+// logs the given message at the `warning` store level.
 export function LogWarning(message: string): void;
 
 // [WindowReload](https://wails.io/docs/reference/runtime/window#windowreload)

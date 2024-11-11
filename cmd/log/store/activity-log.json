@@ -1,0 +1,22 @@
+{
+  "logs": [
+    {
+      "id": "1",
+      "activity": "some activity",
+      "duration": "1s",
+      "timestamp": "2024-11-11T19:20:56Z"
+    },
+    {
+      "id": "2",
+      "activity": "some activity",
+      "duration": "1s",
+      "timestamp": "2024-11-11T19:20:56Z"
+    },
+    {
+      "id": "3",
+      "activity": "some activity",
+      "duration": "1s",
+      "timestamp": "2024-11-11T19:20:56Z"
+    }
+  ]
+}
