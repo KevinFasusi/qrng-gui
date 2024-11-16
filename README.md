@@ -3,7 +3,7 @@
 </p>
 
 # GUI
-![gui-home.jpeg](frontend/assets/images/gui-home.jpeg)
+![gui-home.jpeg](frontend/assets/images/home-view.jpeg)
 
 This is a cross-platform graphical user interface (GUI) for the 
 [quantum random number generator (QRNG) project](https://www.github.com/KevinFasusi/qrng/).
